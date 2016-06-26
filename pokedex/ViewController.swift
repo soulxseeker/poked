@@ -32,13 +32,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func initAudio() {
-        let path = NSBundle.mainBundle().pathForResource("music", ofType: "mp3")!
+        let path = NSBundle.mainBundle().pathForResource("DigimonSong", ofType: "mp3")!
         
         do{
             musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
-            musicPlayer.play()
+            //musicPlayer.play()
             
         }catch let err as NSError {
             print(err.description)
